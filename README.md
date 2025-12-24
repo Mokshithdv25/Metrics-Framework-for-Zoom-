@@ -1,182 +1,220 @@
-Metrics Framework for Zoom (AARRR)
-Overview
+# Metrics Framework for Zoom (AARRR)
 
-This repository presents a hypothetical product analytics framework designed for Zoom, a high-growth SaaS company operating a freemium subscription model.
+## What This Project Shows
 
-The project demonstrates how a Product Manager can move an organization from vanity metrics (e.g., total signups) to a decision-driving KPI system that tracks the full user lifecycle, identifies funnel leakage, and ties product initiatives directly to business outcomes.
+This project is not about dashboards.
 
-The framework is built using Dave McClure’s AARRR (Pirate Metrics) model.
+It shows how a Product Manager can use metrics to:
+- Diagnose user behavior across the entire lifecycle
+- Identify high-impact drop-off points
+- Prioritize product initiatives using data, not intuition
+- Tie product decisions directly to retention and revenue
 
-Problem Statement
+The goal is simple: turn metrics from passive reporting into active decision-making.
 
-As Zoom scaled rapidly, leadership faced three core challenges:
+---
 
-Lack of a unified metrics framework across the user lifecycle
+## Company Context (Hypothetical)
 
-Inability to diagnose funnel drop-offs with precision
+**Company:** Zoom  
+**Business Model:** Freemium SaaS (subscription-based)  
+**Stage:** High-growth, post-product-market fit
 
-Weak linkage between product initiatives and revenue impact
+As Zoom scaled rapidly, tracking top-line metrics like total signups was no longer sufficient. Teams needed a structured way to understand *how* users moved through the product and *why* they converted, retained, or churned.
 
-Without a structured KPI system, teams risked optimizing locally rather than driving sustained growth.
+---
 
-Objective
+## The Problem
 
-Design and implement a comprehensive metrics framework that:
+Zoom faced a familiar scaling challenge:
 
-Measures each stage of the user journey
+- Signups were growing, but **conversion quality was unclear**
+- Engagement metrics existed, but **funnel leakage was hard to pinpoint**
+- Revenue was increasing, but **upsell and expansion signals were weak**
 
-Identifies actionable drop-off points
+Without a unified metrics framework, teams risked optimizing activity instead of outcomes.
 
-Enables data-driven product prioritization
+---
 
-Connects product usage to retention and revenue
+## Objective
 
-Role & Scope
+Design a comprehensive metrics framework that:
+- Covers the full user lifecycle
+- Identifies where users activate, drop off, and convert
+- Enables data-backed product prioritization
+- Connects user behavior to business results
 
-Role: Product Manager, Analytics (Hypothetical)
-Scope:
+---
 
-Metrics definition and ownership
+## Role & Scope
 
-Funnel instrumentation
+**Role:** Product Manager, Analytics (Hypothetical)
 
-Business question framing
+**Responsibilities:**
+- Metrics definition and ownership
+- Funnel design and lifecycle mapping
+- Business question framing
+- Insight → action translation
 
-Insight → action mapping
+---
 
-Framework: AARRR Metrics
-1. Acquisition — How do users find us?
+## Framework Overview: AARRR Metrics
 
-Primary Metric
+The AARRR (Pirate Metrics) framework was selected to break down the user journey into five clear, measurable stages.
 
-Free-to-Paid Conversion Rate
-Measures acquisition quality, not just volume.
+Each stage includes:
+- A primary metric (decision-driving)
+- Supporting metrics (diagnostic)
+- The business questions they answer
 
-Secondary Metrics
+---
 
-Customer Acquisition Cost (CAC)
+## 1. Acquisition — How do users find us?
 
-Channel-specific growth rates
+**Primary Metric**
+- **Free-to-Paid Conversion Rate**  
+  Measures acquisition *quality*, not just volume.
 
-Key Business Questions
+**Supporting Metrics**
+- Customer Acquisition Cost (CAC)
+- Channel-specific growth rates
 
-Are we attracting users who are willing to pay?
+**Key Questions**
+- Are we attracting users who see enough value to pay?
+- Which channels drive the highest-intent users?
 
-Which channels drive high-intent users?
+---
 
-2. Activation — Do users experience value early?
+## 2. Activation — Do users experience value early?
 
-Primary Metric
+**Primary Metric**
+- **Activation Rate**  
+  % of users who host or join their first call within 24 hours of signup.
 
-Activation Rate
-% of users who host or join their first call within 24 hours of signup.
+**Supporting Metrics**
+- Time to First Call
+- Onboarding Completion Rate
 
-Secondary Metrics
+**Key Questions**
+- Are users reaching the “aha” moment quickly?
+- Where does onboarding fail to translate intent into action?
 
-Time to First Call
+---
 
-Onboarding Completion Rate
+## 3. Retention — Do users come back?
 
-Key Business Questions
+**Primary Metric**
+- **Monthly Active Users (MAU)**
 
-Are users reaching the “aha” moment quickly?
+**Supporting Metrics**
+- Monthly churn rate
+- Meetings per user per month
 
-Where does onboarding fail to convert intent into action?
+**Key Questions**
+- Is Zoom becoming part of users’ workflows?
+- Are we retaining both free and paid users over time?
 
-3. Retention — Do users come back?
+---
 
-Primary Metric
+## 4. Referral — Do users tell others?
 
-Monthly Active Users (MAU)
+**Primary Metric**
+- **Net Promoter Score (NPS)**
 
-Secondary Metrics
+**Supporting Metrics**
+- Referral rate
+- Referral-driven signups
 
-Monthly Churn Rate
+**Key Questions**
+- Are users satisfied enough to recommend Zoom?
+- Is word-of-mouth contributing to sustainable growth?
 
-Meetings per User per Month
+---
 
-Key Business Questions
+## 5. Revenue — How does the product make money?
 
-Is Zoom becoming part of users’ workflows?
+**Primary Metric**
+- **Monthly Recurring Revenue (MRR)**
 
-Are we retaining both free and paid users over time?
+**Supporting Metrics**
+- Average Revenue Per User (ARPU)
+- Customer Lifetime Value (CLV)
 
-4. Referral — Do users promote the product?
+**Key Questions**
+- Is revenue growth predictable and scalable?
+- Are upsell and expansion motions effective?
 
-Primary Metric
+---
 
-Net Promoter Score (NPS)
+## Key Insights & Actions (Hypothetical)
 
-Secondary Metrics
+### Activation Insight
 
-Referral Rate
+- Onboarding Completion Rate: **85%**
+- 24-hour Activation Rate: **30%**
 
-Referral-driven Signups
+**Interpretation:**  
+Users completed onboarding but did not immediately experience core product value.
 
-Key Business Questions
+**Action**
+- Introduced a post-onboarding CTA:  
+  *“Host a 1-minute test meeting”*
+- Ran an A/B test against the existing flow
 
-Are users satisfied enough to recommend Zoom?
+**Impact**
+- Activation Rate increased from **30% → 45%**
+- Resulted in a **5% lift in 30-day retention** for the cohort
 
-Is word-of-mouth contributing to organic growth?
+---
 
-5. Revenue — How does the product make money?
+### Revenue Insight
 
-Primary Metric
+- MRR growing, but **ARPU flat**
+- Free-to-Paid Conversion below benchmarks
 
-Monthly Recurring Revenue (MRR)
+**Interpretation:**  
+Users were reaching value but lacked timely upgrade prompts.
 
-Secondary Metrics
+**Action**
+- Analyzed feature usage (e.g., breakout rooms, webinars)
+- Implemented usage-based, in-app upgrade nudges
 
-Customer Lifetime Value (CLV)
+**Impact**
+- ARPU increased by **8%**
+- Free-to-Paid Conversion improved by **2 percentage points**
 
-Average Revenue Per User (ARPU)
+---
 
-Key Business Questions
+## Why This Matters
 
-Is revenue growth predictable and scalable?
+This project demonstrates:
+- Strong lifecycle thinking
+- Clear metric ownership
+- Ability to translate data into product decisions
+- Understanding of freemium SaaS growth dynamics
 
-Are upsells and expansions working?
+This is a **decision framework**, not a reporting exercise.
 
-Key Insights & Actions (Hypothetical)
-Activation Insight
+---
 
-Onboarding Completion Rate: 85%
+## Limitations
 
-24-hour Activation Rate: 30%
+- All metrics and results are hypothetical
+- No real Zoom data was used
+- Focus is on framework design and reasoning, not implementation
 
-Interpretation:
-Users complete onboarding but fail to take the next meaningful action.
+---
 
-Action
+## Potential Extensions
 
-Introduced a post-onboarding CTA:
-“Host a 1-minute test meeting”
+- SQL-based funnel queries
+- Cohort retention analysis
+- Experiment design documentation
+- Mock dashboards (Amplitude / Mixpanel / Looker)
 
-A/B tested against control
+---
 
-Impact
+## Author
 
-Activation Rate increased from 30% → 45%
-
-Resulted in a 5% lift in 30-day retention
-
-Revenue Insight
-
-MRR growing, but ARPU flat
-
-Free-to-Paid Conversion below benchmarks
-
-Interpretation:
-Users were hitting value but not being nudged to upgrade.
-
-Action
-
-Analyzed feature usage (e.g., breakout rooms, webinars)
-
-Implemented usage-based in-app upgrade prompts
-
-Impact
-
-ARPU increased by 8%
-
-Free-to-Paid Conversion lifted by 2 percentage points
+**Moksh**  
+Product Management | Analytics | Growth Strategy
